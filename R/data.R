@@ -400,7 +400,7 @@
 #' Estimated that total escapement to Canada (plus  harvest)
 #' was 66,225 (SE 1574)
 #' Estimated that proportion of stock that was Canadian was .34644 (SE .030)
-#' We converted this into a "sample size" and number of fish with Cdn genetics
+#' We converted this into a "sample size" and number of fish with Canadian genetics
 #' that gave the same SE.
 
 #' @format `data_yukon_reverse`
@@ -417,3 +417,38 @@
 #' @name data_yukon_reverse
 #' @usage data(data_yukon_reverse)
 "data_yukon_reverse"
+
+
+#'  Lower Fraser Coho for Reverse Capture-Recapture with geographic stratification.
+#'
+#' This is the data provided by Kaitlyn Dionne, DFO.
+
+#' Arbeider et al (2020) proposed to estimate the run size of Lower Fraser River Coho (LFC) using a geographically stratified reverse-capture
+#' method. Briefly, a LFC coho swim upstream, they are sampled near New Westminister, BC, which is downstream from several major rivers up which
+#' are large spawning populations. These sample fish are assigned to the spawning population using genetic and other methods. These
+#' spawning populations are identified as the Chilliwack Hatchery (denoted *C*), the Lilloet River natural spawning population (denoted *L*),
+#' the Nicomen Slough population (denote *N*) and all other population (denoted as *0*). Notice that the sample fish at New Westminister
+#' are NOT physically tagged, and population assignment is through genetic and other measures.
+
+#' The upstream migration extends over two months (September to October) and is divided into 3 temporal strata corresponding
+#' to *Early* (denoted *1E*), *Peak* (denoted *2P*) and *Late* (denoted *3L*). The digits 1, 2, 3 in front of the codes ensures
+#' that the temporal strata are sorted temporally, but this is merely a convenience and does not affect the results.
+
+#' The spawning populations at *C*, *L*, and *N* are estimated by a variety of methods (see Arbeider, et al. 2020).
+#' Each of the population estimates also has an estimated (which will be ignored for now).
+
+
+#' @format `data_lfc_reverse`
+#' A data frame with many rows and 4 columns
+#'
+#' \describe{
+#' \item{\code{cap_hist}.}{Capture history with possible histories as noted below}
+#' \item{\code{freq}.}{Number of fish with this history.}
+#' \item{\code{SE}.}{SE of the number of fish with this history. Only available for total escapement to C, L, N}
+#' }
+#'
+#' @docType data
+#' @keywords datasets
+#' @name data_lfc_reverse
+#' @usage data(data_lfc_reverse)
+"data_lfc_reverse"
